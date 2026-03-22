@@ -153,7 +153,7 @@ button:hover {
 }
 
 .todo-full .todo-container .addTask {
-    width: 32%;
+    /* width: 32%; */
     background-color: var(--tri2);
     height: 100%;
     border-radius: 20px;
@@ -167,9 +167,9 @@ button:hover {
     padding: 30px;
 }
 
-.todo-full .todo-container .addTask form input {
+.todo-full .todo-container .addTask form input#task-input {
     padding: 10px 20px;
-    width: 100%;
+    /* width: 100%; */
     font-size: 28px;
     background-color: var(--sec);
     border-radius: 5px;
@@ -239,7 +239,7 @@ button:hover {
 
 .task h5 {
     color: var(--sec);
-    font-size: 35px;
+    font-size: 30px;
     font-family: dark;
     font-weight: lighter;
 }
@@ -257,4 +257,25 @@ button:hover {
 }
 .task button:active {
     scale: 0.96;
+}
+.mark-imp{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+.checkbox{
+    margin-right: 25px;
+}
+.mark-imp input{
+    scale: 1.7;
+}
+.mark-imp label{
+    scale: 1.1;
+}
+.span{
+    color: rgb(255, 0, 0);
 }
