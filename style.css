@@ -1,0 +1,260 @@
+:root {
+    --pri: #F8F4E1;
+    --sec: #2d1504;
+    --tri1: #FEBA17;
+    --tri2: #74512D;
+}
+
+@font-face {
+    font-family: light;
+    src: url(./AeonikTRIAL-Light.otf)
+}
+
+@font-face {
+    font-family: dark;
+    src: url(./AeonikTRIAL-Bold.otf)
+}
+
+@font-face {
+    font-family: regular;
+    src: url(./AeonikTRIAL-Regular.otf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: light;
+    color: var(--pri);
+}
+
+html,
+body {
+    height: 100%;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    width: 100%;
+}
+
+#main {
+    background-color: var(--sec);
+    height: 100%;
+    width: 100%;
+    color: var(--pri);
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background-color: var(--tri2);
+}
+
+section.allElems {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    position: relative;
+    gap: 14px;
+}
+
+.elems {
+    background-color: var(--tri1);
+    /* padding: 30px 40px; */
+    height: 350px;
+    width: 275px;
+    border-radius: 10px;
+    font-size: 30px;
+    overflow: hidden;
+    position: relative;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
+}
+
+.elems img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.elems h2 {
+    font-size: 32px;
+    position: absolute;
+    right: 5%;
+    font-family: light;
+    font-weight: 200;
+    bottom: 3%;
+}
+
+.elems:active {
+    scale: 0.97;
+}
+
+.elems:hover {
+    cursor: pointer;
+}
+
+.fullelem {
+    position: fixed;
+    /* font-family: light; */
+    /* font-weight: bolder; */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+    padding: 40px;
+    /* font-size: 50px; */
+    display: none;
+    z-index: 1000;
+}
+
+.back {
+    /* background-color: transparent; */
+    position: absolute;
+    right: 5%;
+    background-color: rgb(146, 32, 0);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 15px 22px;
+    border: none;
+}
+
+.back:active {
+    scale: 0.97;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.todo-full {
+    /* background-color: rebeccapurple; */
+    display: block;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.todo-full .todo-container {
+    height: 80%;
+    /* background-color: seagreen; */
+    width: 100%;
+    margin-top: 45px;
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-full .todo-container .addTask {
+    width: 32%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+.todo-full .todo-container .addTask form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.todo-full .todo-container .addTask form input {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 28px;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.todo-full .todo-container .addTask form textarea {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 28px;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.todo-full .todo-container .addTask form button {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 24px;
+    background-color: rgb(69, 0, 149);
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: all ease-in-out 0.3s;
+    outline: none;
+}
+
+.todo-full .todo-container .addTask form button:hover {
+    cursor: pointer;
+}
+
+.todo-full .todo-container .addTask form button:active {
+    scale: 0.96;
+    /* cursor: pointer; */
+}
+
+.todo-full .todo-container .allTask {
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: flex-start;
+    color: black;
+    padding: 30px;
+}
+
+.todo-full .todo-container .allTask .task {
+    /* color:black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* color: black; */
+    border-radius: 10px;
+    background-color: var(--pri);
+    margin-bottom: 15px;
+    padding: 10px 20px;
+}
+
+.task h5 {
+    color: var(--sec);
+    font-size: 35px;
+    font-family: dark;
+    font-weight: lighter;
+}
+
+.task button {
+    transition: all ease-in-out 0.3s;
+    padding: 10px 20px;
+    color: var(--pri);
+    background-color: rgb(1, 92, 1);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    /* text-decoration: none; */
+}
+.task button:active {
+    scale: 0.96;
+}
